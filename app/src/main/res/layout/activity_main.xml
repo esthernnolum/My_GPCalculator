@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nn0lumesther.mygpcalculator.MainActivity">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+        android:background="@drawable/color"
+    android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="24dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:id="@+id/nameTv" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level:"
+            android:textSize="24dp"
+            android:padding="5dp"
+            android:textColor="#000000"/>
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:id="@+id/levelTv"
+            android:entries="@array/level_arrays"
+            android:prompt="@string/level_prompt"
+            android:spinnerMode="dropdown"
+            android:contentDescription="level"
+            android:transitionName="level" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semester:"
+                android:textSize="24dp"
+                android:padding="5dp"
+                android:textColor="#000000"/>
+            <Spinner
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:id="@+id/semesterTv"
+                android:entries="@array/semester_arrays"
+                android:prompt="@string/semester_prompt"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:paddingTop="10dp">
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Course"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:layout_span="3" />
+
+        <TextView
+            android:text="Unit load"
+            android:padding="10dp"
+            android:layout_span="1"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:text="Grade"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_span="1"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_one"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2" />
+
+            <Spinner
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner3"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+
+
+        </TableRow>
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_two"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2" />
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:paddingLeft="10dp"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_three"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2" />
+
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_four"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner6"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_five"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner7"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_six"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner8"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_seven"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner9"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_eight"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner10"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_nine"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner11"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_ten"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner12"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_eleven"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner13"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_twelve"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2" />
+
+            <Spinner
+                android:id="@+id/spinner14"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_thirteen"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner15"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_fourteen"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner16"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+
+        <TableRow>
+            <EditText
+                android:layout_column="1"
+                android:hint="Course"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_span="3" />
+
+            <Spinner
+                android:id="@+id/grade_fifteen"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:entries="@array/load_arrays"
+                android:prompt="@string/load_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"
+                android:layout_column="2"
+                />
+
+            <Spinner
+                android:id="@+id/spinner17"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_column="3"
+                android:entries="@array/grade_arrays"
+                android:prompt="@string/grade_prompt"
+                android:spinnerMode="dropdown"
+                android:paddingLeft="10dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="2dp"
+            android:background="#000000"/>
+    </TableLayout>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calculate"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/color2"
+            android:layout_marginLeft="130dp"
+            android:onClick="submit"/>
+    </LinearLayout>
+</ScrollView>

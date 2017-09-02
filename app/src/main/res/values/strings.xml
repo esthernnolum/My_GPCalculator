@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">My GP Calculator</string>
+    <string name="grade_prompt">grade</string>
+    <string name="semester_prompt">semester</string>
+    <string name="level_prompt">level</string>
+    <string name="load_prompt">load</string>
+
+    <string name="comment_info1">
+        You have to try harder,
+        maybe make your own personal
+        timetable to be able to manage
+        your time well.
+    </string>
+
+    <string name="comment_info2">
+        Have you been playing.
+        If you dont love the course
+        youre studying, I advice you
+        change to the one you
+        can do better in.
+    </string>
+
+    <string name="comment_info3">
+        Congrats, you did great,
+        but you can do more.
+    </string>
+
+    <string name="comment_info4">
+        WOW, congrats dear,
+        I will like to know you.
+    </string>
+
+    <string-array name="grade_arrays">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+
+    </string-array>
+
+
+    <string-array name="load_arrays">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="semester_arrays">
+        <item>first</item>
+        <item>second</item>
+    </string-array>
+
+    <string-array name="level_arrays">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+    </string-array>
+</resources>
